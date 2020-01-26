@@ -1,0 +1,1 @@
+Check if any combination of the numbers in the array is equal to the second argument.
