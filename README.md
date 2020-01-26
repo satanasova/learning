@@ -1,2 +1,2 @@
-Project for collecting exercises
-change 1 2 3 
+Project for collecting exercise
+change 1 2 3
