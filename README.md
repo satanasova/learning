@@ -1,1 +1,1 @@
-Project for collecting exercise
+Project for collecting exercises
