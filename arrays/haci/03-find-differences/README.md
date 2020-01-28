@@ -1,0 +1,1 @@
+Write a function that accepts 2 arrays and displays the difference between them (all the elements that exist in one array and don't exist in the other)
