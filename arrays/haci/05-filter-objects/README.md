@@ -1,0 +1,1 @@
+Write a function that accepts an array of objects ({name:'...', age: ..., gender: '...'}), {property name}, {value}, filters the objects and leaves only those objects that have property {property name } with value {value}
