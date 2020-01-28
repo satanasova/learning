@@ -15,6 +15,6 @@
 
 8. write a function that accepts two arrays and merges them. To merge them the function gets all the unique values from the 2 arrays. If an elements exists in the two arrays it is only    included once in the merged array.
 
-9. write a function that accepts an {array of numbers}, {index}, {steps}. It then move the element at position {index} in the array {steps} steps to the right. If the element gets to the end of the array before all the steps are finished, the element is moved to the beginning of the array and continues its steps
+9. write a function that accepts an {array of numbers}, {index}, {steps}. It then moves the element at position {index} in the array {steps} steps to the right. If the element gets to the end of the array before all the steps are finished, the element is moved to the beginning of the array and continues its steps
 
 10. write a function that accepts an array of unique elements and shuffles it. The function is unlimited in working time and it should guarantee that not a single element is found in the same place that originally was
