@@ -1,0 +1,1 @@
+Write a function that accepts an array and outputs which is most frequent item in the array. If there is no item that occurs more than once, it should return "None"

@@ -1,0 +1,1 @@
+Write a function that removes duplicate elements from array.
