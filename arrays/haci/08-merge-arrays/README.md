@@ -1,0 +1,1 @@
+Write a function that accepts two arrays and merges them. To merge them the function gets all the unique values from the 2 arrays. If an elements exists in the two arrays it is only included once in the merged array.
