@@ -1,0 +1,1 @@
+ Write a function that accepts an array of objects ({name:'...', age: ..., gender: '...'}) and accepts a {property name} and sorts the objects in the array based on the property that was passed as a second argument (example: ([{.}, {.}, {.}], 'name')  - means sort the objects by name)
