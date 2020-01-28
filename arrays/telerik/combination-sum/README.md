@@ -1,1 +1,1 @@
-Check if any combination of the numbers in the array is equal to the second argument.
+Find in given array of integers all combinations of sums that are equal to a given number

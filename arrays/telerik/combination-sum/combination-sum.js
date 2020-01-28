@@ -1,7 +1,3 @@
-// Description
-// Write a program that finds in given array of integers all combinations of sums that are equal to a given number (if present)
-
-
 function binaryCombo(arr, S) {
     const binaryLength = Math.pow(2, arr.length),
         combos = [];
@@ -16,7 +12,7 @@ function binaryCombo(arr, S) {
                 singleCombo.push(arr[j]);
             }
         }
-
+        
         combos.push(singleCombo);
     }
 

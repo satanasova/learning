@@ -3,7 +3,11 @@ Use the Selection sort algorithm: Find the smallest element, move it at the firs
 find the smallest from the rest, move it at the second position, etc.
 
 ---
+Input:
+- On the first line you will receive the number N
+- On the next N lines the numbers of the array will be given
 
+---
 Output:
 - Print the sorted array
     - Each number should be on a new line
