@@ -14,7 +14,7 @@ function findDifferences(arr1, arr2) {
     return differences;
 }
 
-console.log(findDifferences(['mili', 'pufi', 'malko pi', 'abchi'], ['mili', 'pufi', 'bichi', 'richi', 'tigyr']));
+console.log(findDifferences(['mili', 'pufi', 'malko pi', 'abchi', 4], ['mili', 'pufi', 'bichi', 3, 'richi', 'tigyr']));
 
 
 function findDifferences_Filter(arr1, arr2) {

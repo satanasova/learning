@@ -19,5 +19,5 @@ function findMostFreq(arr) {
     return repItem ? repItem : 'None';
 }
 
-console.log(findMostFreq(['pufi', 'malko pi', 'abchi', 'mili', 'mili', 'mili', 'mili', 'mili', '4', '4', '4', '3', '4', '3']));
+console.log(findMostFreq(['pufi', 'malko pi', 'abchi', 'mili', 'mili', 'mili', 'mili', 'mili', 4, 4, 4, 4, 4, 4]));
 console.log(findMostFreq(['mili', 'pufi', 'malko pi', 'abchi', 'tigyr', 'jerry', 'bichi', 'richi']));
