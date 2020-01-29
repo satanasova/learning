@@ -1,0 +1,1 @@
+Write a function that accepts an array of numbers and checks if there are 2 different pairs of numbers which sum is equal
