@@ -49,3 +49,33 @@ function findDiffPairs_2(arr) {
 
 console.log('=============');
 console.log(findDiffPairs_2([1, 2, 3, 4, 5]));
+
+
+function findDiffPairs_3(arr) {
+    let singlePair = {},
+        pairs = [],
+        output = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            singlePair.numbers = [arr[i], arr[j]]; 
+            singlePair.sum = arr[i] + arr[j];
+            pairs.push(singlePair);
+            singlePair = {};          
+        } 
+    }
+
+    for (let i = 0; i < pairs.length; i++) {
+        for (let j = i + 1; j < pairs.length; j++) {
+            if (pairs[i].sum === pairs[j].sum) {
+                output.push(`${pairs[i].numbers.join(' + ')} = ${pairs[j].numbers.join(' + ')}`)
+            }
+        }
+    }
+
+    // console.log(pairs);
+    return output.join('\n');
+}
+
+console.log('=============');
+console.log(findDiffPairs_3([1, 2, 3, 4, 5]));
