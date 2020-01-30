@@ -1,0 +1,1 @@
+Write a function that accepts an array of unique elements and shuffles it. The function is unlimited in working time and it should guarantee that not a single element is found in the same place that originally was
