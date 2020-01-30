@@ -1,0 +1,1 @@
+Write a function that accepts an {array of numbers}, {index}, {steps}. It then moves the element at position {index} in the array {steps} steps to the right. If the element gets to the end of the array before all the steps are finished, the element is moved to the beginning of the array and continues its steps
