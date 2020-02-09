@@ -1,7 +1,7 @@
 function moveElement(arr, idx, steps) {
     let theEl,
         len = arr.length;
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 0; i < len; i++) {
         if (i === idx){
             theEl = arr.splice(idx,1);
             while (idx + steps > len-1) {
