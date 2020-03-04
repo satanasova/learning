@@ -10,7 +10,7 @@ function findDifferences(arr1, arr2) {
             differences.push(arr2[i]);
         }
     }
-    
+
     return differences;
 }
 
@@ -29,3 +29,5 @@ function findDifferences_Filter(arr1, arr2) {
 }
 
 console.log(findDifferences_Filter(['mili', 'pufi', 'malko pi', 'abchi'], ['mili', 'pufi', 'bichi', 'richi', 'tigyr']));
+
+// гуд

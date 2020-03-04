@@ -32,8 +32,8 @@ function findDiffPairs_2(arr) {
 
     for (let i = 0; i < arr.length; i++) {
         for (let j = i + 1; j < arr.length; j++) {
-            pairs.push(arr[i], arr[j], arr[i] + arr[j]);            
-        } 
+            pairs.push(arr[i], arr[j], arr[i] + arr[j]);
+        }
     }
 
     for (let i = 2; i < pairs.length; i += 3) {
@@ -43,7 +43,7 @@ function findDiffPairs_2(arr) {
             }
         }
     }
-    
+
     return output.join('\n');
 }
 
@@ -58,11 +58,11 @@ function findDiffPairs_3(arr) {
 
     for (let i = 0; i < arr.length; i++) {
         for (let j = i + 1; j < arr.length; j++) {
-            singlePair.numbers = [arr[i], arr[j]]; 
+            singlePair.numbers = [arr[i], arr[j]];
             singlePair.sum = arr[i] + arr[j];
             pairs.push(singlePair);
-            singlePair = {};          
-        } 
+            singlePair = {};
+        }
     }
 
     for (let i = 0; i < pairs.length; i++) {
@@ -79,3 +79,5 @@ function findDiffPairs_3(arr) {
 
 console.log('=============');
 console.log(findDiffPairs_3([1, 2, 3, 4, 5]));
+
+// гуд, третия вариант е най-добре, само дето singlePair променливата навсякъде си я декларирала топ левел, а я ползваш само вътре във вътрешния фор и няма смисъл да е топ левел
