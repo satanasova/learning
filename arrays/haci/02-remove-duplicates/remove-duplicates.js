@@ -10,7 +10,7 @@ function removeDuplicates_Include(arr) {
     for (let i = 0; i < arr.length; i++) {
         if (!newArr.includes(arr[i])){
             newArr.push(arr[i]);
-        }    
+        }
     }
     return newArr;
 }
@@ -24,3 +24,5 @@ function removeDuplicates_Filter(arr) {
 }
 
 console.log(removeDuplicates_Filter(['pufi', 'malko pi', 'abchi', 'mili', 'mili', 'mili', 'mili', 'mili', '4', '4', '4', '3', '4', '3']));
+
+// добре са, само ще трябва да ми обясниш и на мен какво си разбрала за последния вариант
