@@ -1,13 +1,12 @@
 function findDiffPairs(arr) {
     let pairs =[],
-        singlePair = [],
         output = [];
 
     for (let i = 0; i < arr.length; i++) {
         for (let j = i + 1; j < arr.length; j++) {
+            let singlePair = [];
             singlePair.push(arr[i], arr[j], arr[i] + arr[j]);
             pairs.push(singlePair);
-            singlePair = [];
         }
     }
 
@@ -52,16 +51,15 @@ console.log(findDiffPairs_2([1, 2, 3, 4, 5]));
 
 
 function findDiffPairs_3(arr) {
-    let singlePair = {},
-        pairs = [],
+    let pairs = [],
         output = [];
 
     for (let i = 0; i < arr.length; i++) {
         for (let j = i + 1; j < arr.length; j++) {
+            let singlePair = {};
             singlePair.numbers = [arr[i], arr[j]];
             singlePair.sum = arr[i] + arr[j];
             pairs.push(singlePair);
-            singlePair = {};
         }
     }
 
@@ -80,4 +78,8 @@ function findDiffPairs_3(arr) {
 console.log('=============');
 console.log(findDiffPairs_3([1, 2, 3, 4, 5]));
 
+// haci:
 // гуд, третия вариант е най-добре, само дето singlePair променливата навсякъде си я декларирала топ левел, а я ползваш само вътре във вътрешния фор и няма смисъл да е топ левел
+
+// pecka:
+// oki doki
