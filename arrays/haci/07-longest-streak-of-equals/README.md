@@ -1,1 +1,2 @@
-Write a function that accepts an array of elements and outputs which is the longest streak of equal elements, how long the streak is and what element is example: [1, 2, 3, 3, 3, 2, 2, 3, 2, 2, 1, 2, 2] - longest streak is [3, 3, 3] starting from index 2
+Write a function that accepts an array of elements and outputs which is the longest streak of equal elements, how long the streak is and what element is
+example: [1, 2, 3, 3, 3, 2, 2, 3, 2, 2, 1, 2, 2] - longest streak is [3, 3, 3] starting from index 2
