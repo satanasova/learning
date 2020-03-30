@@ -78,8 +78,11 @@ function findDiffPairs_3(arr) {
 console.log('=============');
 console.log(findDiffPairs_3([1, 2, 3, 4, 5]));
 
-// haci:
+// haci1:
 // гуд, третия вариант е най-добре, само дето singlePair променливата навсякъде си я декларирала топ левел, а я ползваш само вътре във вътрешния фор и няма смисъл да е топ левел
 
-// pecka:
+// pecka1:
 // oki doki
+
+// haci2:
+// ok

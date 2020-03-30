@@ -11,7 +11,7 @@ function findMostFreq(arr) {
         for (let j = i + 1; j < arr.length; j++) {
             if (arr[i] === arr[j]) {
                 repTimes++;
-                usedItems.push(arr[i]);
+                usedItems.push(arr[i]); // haci2: защо го пушваш тук в usedItems. Теб не те интересува има ли равни, няма ли. Ако си го проверила веднъж повече няма нужда да го проверяваш. дирекнто преди repTimes=1 го маркираш като изпозлвано и почваш да му търсиш еднакви
                 console.log(arr[i], repTimes);
             }
             if (maxRepTimes < repTimes) {
@@ -21,13 +21,13 @@ function findMostFreq(arr) {
         }
     }
 
-    return repItem ? repItem : 'None'; //гуд
+    return repItem ? repItem : 'None'; //haci1: гуд
 }
 
 console.log(findMostFreq(['pufi', 'mili', 'abchi', 'mili', 'mili', 'mili', 'mili', 'mili', 4, 4, 4, 'mili', 4, 4]));
 console.log(findMostFreq(['mili', 'pufi', 'malko pi', 'abchi', 'tigyr', 'jerry', 'bichi', 'richi']));
 
-// haci:
+// haci1:
 // правилно, но може да се оптимизира. ако имаш примерно X, Y, Y, X, X, X, X, X
 // и ти въртиш по всеки елемент и броиш
 // X - Y, Y, X, X, X, X, X  - item: X repTimes: 5
@@ -41,5 +41,8 @@ console.log(findMostFreq(['mili', 'pufi', 'malko pi', 'abchi', 'tigyr', 'jerry',
 
 //тук X го смяташ 6 пъти, а още първия път го смяташ както трябва и намираш макс повторенията, от следващите 5 пъти няма смисъл
 
-// pecka:
+// pecka1:
 // това сиг не е най-умното, ама от една пецка толкос :Д
+
+// haci2:
+// само 1 последно ти е останало и е топ
