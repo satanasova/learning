@@ -7,12 +7,13 @@ function findMostFreq(arr) {
         if(usedItems.includes(arr[i])) {
             continue;
         }
+        usedItems.push(arr[i]);
         let repTimes = 1;
         for (let j = i + 1; j < arr.length; j++) {
             if (arr[i] === arr[j]) {
                 repTimes++;
-                usedItems.push(arr[i]); // haci2: защо го пушваш тук в usedItems. Теб не те интересува има ли равни, няма ли. Ако си го проверила веднъж повече няма нужда да го проверяваш. дирекнто преди repTimes=1 го маркираш като изпозлвано и почваш да му търсиш еднакви
-                console.log(arr[i], repTimes);
+                // usedItems.push(arr[i]); // haci2: защо го пушваш тук в usedItems. Теб не те интересува има ли равни, няма ли. Ако си го проверила веднъж повече няма нужда да го проверяваш. дирекнто преди repTimes=1 го маркираш като изпозлвано и почваш да му търсиш еднакви
+                // console.log(arr[i], repTimes);
             }
             if (maxRepTimes < repTimes) {
                 maxRepTimes = repTimes;
@@ -46,3 +47,6 @@ console.log(findMostFreq(['mili', 'pufi', 'malko pi', 'abchi', 'tigyr', 'jerry',
 
 // haci2:
 // само 1 последно ти е останало и е топ
+
+// pecka:
+// оки

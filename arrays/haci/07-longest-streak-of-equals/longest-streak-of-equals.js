@@ -8,7 +8,9 @@ function findLongestStreakOfEquals(arr) {
     for (let i = 0; i < arr.length; i++) {
         if (arr[i-1] === arr[i]) {
             curLen++
-        } else curLen = 1;  //haci1: ?!
+        } else { 
+            curLen = 1; 
+        } 
         if (curLen > maxLen) {
             maxLen = curLen;
             endElIdx = i;
@@ -27,8 +29,13 @@ console.log(findLongestStreakOfEquals([1, 'mili', 2, 'mili', 3, 'mili', 4, 'mili
 
 
 // haci1:
-// Като цяло добре, ама тоя елсе е пълен факан шит така без скобите
-// може да погледнеш това що се бъгва:
+// - Като цяло добре, ама тоя елсе е пълен факан шит така без скобите
+// - може да погледнеш това що се бъгва:
+
+// pecka:
+// - само скобите ли са проблема или като цяло elsa?
+// - ем щот са нафакани 
 
 console.log(findLongestStreakOfEquals([undefined, undefined, undefined, 1, 'mili', 2, 'mili', 3, 'mili', 4, 'mili', 3, 'mili']));
 console.log(findLongestStreakOfEquals([null, null, null, 1, 'mili', 2, 'mili', 3, 'mili', 4, 'mili', 3, 'mili']));
+
