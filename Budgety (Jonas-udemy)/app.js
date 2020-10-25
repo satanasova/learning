@@ -22,7 +22,7 @@ var budgetController = (function() {
     }
 
     Expense.prototype.getPercentage = function() {
-        return this.percentage
+        return this.percentage;
     }
 
     var data = {
@@ -35,6 +35,20 @@ var budgetController = (function() {
             exp: 0
         },
         budget: 0
+    }
+
+    var persistData = function() {
+        localStorage.setItem('allItems', JSON.stringify(data.allItems));
+    }
+
+    var readStorage = function() {
+        var storage = JSON.parse(localStorage.getItem('allItems'));
+        if (storage) {
+            var parsedInc = storage.inc.map(incObj => new Income(incObj.id, incObj.description, incObj.value));
+            var parsedExp = storage.exp.map(expObj => new Expense(expObj.id, expObj.description, expObj.value));
+            data.allItems.inc = parsedInc;
+            data.allItems.exp = parsedExp;
+        }
     }
 
     var calculateTotal = function(type) {
@@ -60,6 +74,8 @@ var budgetController = (function() {
 
             data.allItems[type].push(newItem);
 
+            persistData()
+
             return newItem;
         },
 
@@ -73,6 +89,8 @@ var budgetController = (function() {
             if (index !== -1) {
                 data.allItems[type].splice(index, 1);
             }
+
+            persistData();
 
         },
 
@@ -108,6 +126,9 @@ var budgetController = (function() {
 
             return allPerc;
         },
+
+        readStorage,
+        data,
 
         test: function() {
             console.log(data, data.budget);
@@ -180,7 +201,7 @@ var UIController = (function() {
                 <div class="item clearfix" id="inc-${obj.id}">
                     <div class="item__description">${obj.description}</div>
                     <div class="right clearfix">
-                        <div class="item__value">${formatNumber(obj.value)}</div>
+                        <div class="item__value">${formatNumber(obj.value, 'inc')}</div>
                         <div class="item__delete">
                             <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
                         </div>
@@ -192,7 +213,7 @@ var UIController = (function() {
                 <div class="item clearfix" id="exp-${obj.id}">
                     <div class="item__description">${obj.description}</div>
                     <div class="right clearfix">
-                        <div class="item__value">${formatNumber(obj.value)}</div>
+                        <div class="item__value">${formatNumber(obj.value, 'exp')}</div>
                         <div class="item__percentage">21%</div>
                         <div class="item__delete">
                             <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
@@ -332,8 +353,16 @@ var controller = (function(budgetCtrl, UICtrl) {
         UICtrl.displayPercentages(percs);
     }
 
+    var loadDataFromStorage = function() {
+        budgetCtrl.readStorage();
+        budgetCtrl.data.allItems.inc.forEach(curInc => UICtrl.addListItem(curInc, 'inc'));
+        budgetCtrl.data.allItems.exp.forEach(curExp => UICtrl.addListItem(curExp, 'exp'));
+        
+    }
+
     return {
         init: function() {
+            loadDataFromStorage();
             setupEventListeners();
             updateBudget();
             updatePercentages();
